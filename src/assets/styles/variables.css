@@ -1,0 +1,28 @@
+:root {
+    --ratio: calc(1920 / 100); /*нужно для расчёта резиновой вёрстки*/
+    --size-24-24-12: 24px;
+    --size-24-16-10: clamp(16px, calc(24vw / var(--ratio)), 24px);
+
+    --color-text-white-100: rgba(255, 252, 242, 1);
+    --color-text-white-80: rgba(255, 252, 242, 0.8);
+    --color-text-white-75: rgba(255, 252, 242, 0.75);
+    --color-text-white-60: rgba(255, 252, 242, 0.6);
+    --color-text-yellow: rgba(255, 214, 1, 1);
+
+    --transition-hover: all 0.5s;
+}
+
+@media screen and (max-width: 834px) {
+    :root {
+        --ratio: calc(834 / 100);
+        --size-24-24-12: clamp(12px, calc(24vw / var(--ratio)), 24px);
+        --size-24-16-10: clamp(10px, calc(16vw / var(--ratio)), 16px);
+    }
+}
+@media screen and (max-width: 390px) {
+    :root {
+        --ratio: calc(390 / 100);
+        --size-24-24-12: 12px;
+        --size-24-16-10: 10px;
+    }
+}

@@ -1,3 +1,8 @@
+<script setup>
+import SocialNetwork from "./SocialNetwork.vue";
+import Logo from "./Logo.vue";
+</script>
+
 <template>
     <header className="header">
         <main className="header_top">
@@ -11,7 +16,7 @@
         </main>
         <hr className="header_line" />
         <main className="header_bottom">
-            <Logo className="test" />
+            <Logo />
         </main>
     </header>
 </template>
@@ -27,26 +32,31 @@
     .header_bottom {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         max-width: 1600px;
         margin: 0 auto;
+        padding: 0 10px;
+        font-family: "Cruinn Black";
     }
 
     .header_top {
-        justify-content: space-between;
-        font-family: "Cruinn Black";
-        color: rgb(255, 252, 242);
+        color: var(--color-text-white-80);
         .top_right {
             display: flex;
             align-items: center;
             .right_contact {
                 padding: 14px 0;
-                // font-size: $size-24-24-12;
+                font-size: var(--size-24-24-12);
+                transition: var(--transition-hover);
                 &:first-child {
                     padding-right: 30px;
                     border-right: 2px solid rgb(255, 252, 242, 0.1);
                 }
                 &:last-child {
-                    margin-left: 30px;
+                    padding-left: 30px;
+                }
+                &:hover {
+                    color: var(--color-text-white-100);
                 }
             }
         }
