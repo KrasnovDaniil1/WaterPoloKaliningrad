@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Akrobat ExtraBold";
+    font-weight: 800;
+    src: url("../assets/fonts/akrobat/akrobat-extrabold.eot");
+    src: url("../assets/fonts/akrobat/akrobat-extrabold.eot?#iefix")
+            format("embedded-opentype"),
+        url("../assets/fonts/akrobat/akrobat-extrabold.woff2") format("woff2"),
+        url("../assets/fonts/akrobat/akrobat-extrabold.woff") format("woff"),
+        url("../assets/fonts/akrobat/akrobat-extrabold.ttf") format("truetype"),
+        url("../assets/fonts/akrobat/akrobat-extrabold.svg#akrobat-extrabold")
+            format("svg");
+}
+@font-face {
+    font-family: "Cruinn Black";
+    font-weight: 900;
+    src: url("../assets/fonts/cruinn/CruinnBlack.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Cruinn Bold";
+    font-weight: 700;
+    src: url("../assets/fonts/cruinn/CruinnBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Cruinn Medium";
+    font-weight: 500;
+    src: url("../assets/fonts/cruinn/CruinnMedium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat Regular";
+    font-weight: 400;
+    src: url("../assets/fonts/montserrat/montserrat_regular.eot");
+    src: url("../assets/fonts/montserrat/montserrat_regular.eot?#iefix")
+            format("embedded-opentype"),
+        url("../assets/fonts/montserrat/montserrat_regular.woff2")
+            format("woff2"),
+        url("../assets/fonts/montserrat/montserrat_regular.woff") format("woff"),
+        url("../assets/fonts/montserrat/montserrat_regular.ttf")
+            format("truetype"),
+        url("../assets/fonts/montserrat/montserrat_regular.svg#montserrat_regular")
+            format("svg");
+}
+@font-face {
+    font-family: "Montserrat Medium";
+    font-weight: 500;
+    src: url("../assets/fonts/montserrat/montserrat_medium.eot");
+    src: url("../assets/fonts/montserrat/montserrat_medium.eot?#iefix")
+            format("embedded-opentype"),
+        url("../assets/fonts/montserrat/montserrat_medium.woff2")
+            format("woff2"),
+        url("../assets/fonts/montserrat/montserrat_medium.woff") format("woff"),
+        url("../assets/fonts/montserrat/montserrat_medium.ttf")
+            format("truetype"),
+        url("../assets/fonts/montserrat/montserrat_medium.svg#montserrat_medium")
+            format("svg");
+}
