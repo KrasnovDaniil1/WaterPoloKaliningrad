@@ -46,14 +46,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--color-text-yellow);
+    color: var(--color-yellow);
     .logo_img {
-        width: 54px;
-        height: 54px;
+        width: clamp(40px, calc(54vw / var(--ratio)), 54px);
+        height: clamp(40px, calc(54vw / var(--ratio)), 54px);
     }
     .logo_label {
         font-family: "Cruinn Black";
-        font-size: 14px;
+        font-size: clamp(10px, calc(14vw / var(--ratio)), 14px);
         text-align: center;
     }
 }

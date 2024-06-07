@@ -57,10 +57,10 @@
 
         .link_img {
             width: 24px;
-            fill: var(--color-text-white-80);
+            fill: var(--color-white-80);
             transition: var(--transition-hover);
             &:hover {
-                fill: var(--color-text-white-100);
+                fill: var(--color-white-100);
             }
         }
     }

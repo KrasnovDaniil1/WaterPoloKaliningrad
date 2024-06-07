@@ -1,0 +1,67 @@
+:root {
+    --ratio: calc(1920 / 100); /*нужно для расчёта резиновой вёрстки*/
+    --size-24-24-12: 24px;
+    --size-24-16-10: clamp(16px, calc(24vw / var(--ratio)), 24px);
+
+    --color-white-100: rgba(255, 252, 242, 1);
+    --color-white-80: rgba(255, 252, 242, 0.8);
+    --color-white-75: rgba(255, 252, 242, 0.75);
+    --color-white-60: rgba(255, 252, 242, 0.6);
+    --color-white-40: rgba(255, 252, 242, 0.4);
+    --color-blue-100: rgba(0, 77, 243, 1);
+    --color-blue-50: rgba(0, 77, 243, 0.5);
+    --color-blue-100: rgba(0, 77, 243, 1);
+    --color-yellow: rgba(255, 214, 1, 1);
+
+    --transition-hover: all 0.5s;
+
+    /*для кнопок*/
+    --size-24-16-12: clamp(16px, calc(24vw / var(--ratio)), 24px);
+    --width-btn: clamp(164px, calc(250vw / var(--ratio)), 250px);
+    --px-16-10-8: clamp(10px, calc(16vw / var(--ratio)), 16px);
+}
+
+@media screen and (max-width: 834px) {
+    :root {
+        --ratio: calc(834 / 100);
+        --size-24-24-12: clamp(12px, calc(24vw / var(--ratio)), 24px);
+        --size-24-16-10: clamp(10px, calc(16vw / var(--ratio)), 16px);
+
+        /*для кнопок*/
+        --size-24-16-12: clamp(12px, calc(16vw / var(--ratio)), 16px);
+        --width-btn: clamp(117px, calc(164vw / var(--ratio)), 164px);
+        --px-16-10-8: clamp(8px, calc(10vw / var(--ratio)), 10px);
+    }
+}
+@media screen and (max-width: 390px) {
+    :root {
+        --ratio: calc(390 / 100);
+        --size-24-24-12: 12px;
+        --size-24-16-10: 10px;
+
+        /*для кнопок*/
+        --size-24-16-12: 12px;
+        --width-btn: 117px;
+        --px-16-10-8: 8px;
+    }
+}
+
+/*для светлых кнопок*/
+.btn-blue {
+    width: var(--width-btn);
+    padding: var(--px-16-10-8) 0;
+    font-family: "Cruinn Black";
+    text-align: center;
+    font-size: var(--size-24-16-12);
+    letter-spacing: 0.48px;
+    background: var(--color-blue-100);
+    color: var(--color-white-100);
+    transition: var(--transition-hover);
+    &:hover {
+        background: var(--color-white-100);
+        color: var(--color-blue-100);
+    }
+}
+/*для тёмных кнопок*/
+.btn-dark {
+}

@@ -1,5 +1,8 @@
 <script setup>
 import SocialNetwork from "./SocialNetwork.vue";
+import HeaderRouter from "./HeaderRouter.vue";
+import BtnSignUp from "./Buttons/BtnSignUp.vue";
+
 import Logo from "./Logo.vue";
 </script>
 
@@ -17,6 +20,8 @@ import Logo from "./Logo.vue";
         <hr className="header_line" />
         <main className="header_bottom">
             <Logo />
+            <HeaderRouter />
+            <BtnSignUp />
         </main>
     </header>
 </template>
@@ -40,7 +45,7 @@ import Logo from "./Logo.vue";
     }
 
     .header_top {
-        color: var(--color-text-white-80);
+        color: var(--color-white-80);
         .top_right {
             display: flex;
             align-items: center;
@@ -56,18 +61,18 @@ import Logo from "./Logo.vue";
                     padding-left: 30px;
                 }
                 &:hover {
-                    color: var(--color-text-white-100);
+                    color: var(--color-white-100);
                 }
             }
         }
     }
     .header_bottom {
-        .test {
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: green;
-        }
+        padding: 14px 10px;
+    }
+}
+@media screen and (max-width: 834px) {
+    .header {
+        display: none;
     }
 }
 </style>
