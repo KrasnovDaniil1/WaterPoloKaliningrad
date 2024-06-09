@@ -1,26 +1,34 @@
 <script setup>
-import SocialNetwork from "./SocialNetwork.vue";
+import SocialNetwork from "../SocialNetwork.vue";
 import HeaderRouter from "./HeaderRouter.vue";
-import BtnSignUp from "./Buttons/BtnSignUp.vue";
+import BtnSignUp from "../Buttons/BtnSignUp.vue";
+import EmailLink from "../Other/EmailLink.vue";
+import MobileLink from "../Other/MobileLink.vue";
 
-import Logo from "./Logo.vue";
+import Logo from "../Other/Logo.vue";
+
+import { LINKS_ROUTER } from "../../router";
 </script>
 
 <template>
     <header className="header">
         <main className="header_top">
             <div className="top_right">
-                <a href="#" className="right_contact">
-                    vodnoepolo39@yandex.ru
-                </a>
-                <a href="#" className="right_contact"> +7 906 237 65 43 </a>
+                <EmailLink className="right_contact" />
+                <MobileLink className="right_contact" />
             </div>
             <SocialNetwork />
         </main>
         <hr className="header_line" />
         <main className="header_bottom">
             <Logo />
-            <HeaderRouter />
+            <router-link
+                class="bottom_router"
+                v-for="(link, index) in LINKS_ROUTER"
+                :key="index"
+                :to="link.to"
+                >{{ link.name }}</router-link
+            >
             <BtnSignUp />
         </main>
     </header>
@@ -68,8 +76,16 @@ import Logo from "./Logo.vue";
     }
     .header_bottom {
         padding: 14px 10px;
+        .bottom_router {
+            color: var(--color-white-40);
+            font-size: clamp(18px, calc(24vw / var(--ratio)), 24px);
+        }
+        .router-link-active {
+            color: var(--color-white-100);
+        }
     }
 }
+
 @media screen and (max-width: 834px) {
     .header {
         display: none;

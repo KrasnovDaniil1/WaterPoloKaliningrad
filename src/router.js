@@ -65,3 +65,30 @@ router.afterEach(() => {
 });
 
 export default router;
+
+export const LINKS_ROUTER = [
+    {
+        to: "children",
+        name: "Детям",
+    },
+    {
+        to: "amateurs",
+        name: "Любителям",
+    },
+    {
+        to: "students",
+        name: "Студентам",
+    },
+    {
+        to: "federation",
+        name: "Федерация",
+    },
+    {
+        to: "blog",
+        name: "Блог",
+    },
+    {
+        to: "contacts",
+        name: "Контакты",
+    },
+];

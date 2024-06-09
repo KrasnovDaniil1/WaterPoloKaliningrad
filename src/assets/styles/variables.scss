@@ -33,9 +33,9 @@
         --px-16-10-8: clamp(8px, calc(10vw / var(--ratio)), 10px);
     }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 450px) {
     :root {
-        --ratio: calc(390 / 100);
+        --ratio: calc(450 / 100);
         --size-24-24-12: 12px;
         --size-24-16-10: 10px;
 
@@ -47,13 +47,16 @@
 }
 
 /*для светлых кнопок*/
-.btn-blue {
+.btn {
     width: var(--width-btn);
     padding: var(--px-16-10-8) 0;
-    font-family: "Cruinn Black";
     text-align: center;
     font-size: var(--size-24-16-12);
     letter-spacing: 0.48px;
+    transition: var(--transition-hover);
+}
+.btn-blue {
+    font-family: "Cruinn Black";
     background: var(--color-blue-100);
     color: var(--color-white-100);
     transition: var(--transition-hover);

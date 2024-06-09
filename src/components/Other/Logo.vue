@@ -1,5 +1,5 @@
 <template>
-    <a className="logo" href="#">
+    <router-link class="logo" to="/">
         <svg
             width="50"
             height="48"
@@ -34,11 +34,11 @@
             />
         </svg>
 
-        <span className="logo_label">
+        <span class="logo_label">
             Водное поло <br />
             Калининград
         </span>
-    </a>
+    </router-link>
 </template>
 
 <style lang="scss" scoped>
@@ -71,7 +71,7 @@
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 450px) {
     .logo {
         .logo_img {
             width: 24px;
@@ -79,7 +79,7 @@
         }
         .logo_label {
             margin-left: 2px;
-            font-size: 10px;
+            font-size: 8px;
         }
     }
 }
