@@ -12,6 +12,7 @@
     --color-blue-50: rgba(0, 77, 243, 0.5);
     --color-blue-100: rgba(0, 77, 243, 1);
     --color-yellow: rgba(255, 214, 1, 1);
+    --color-black: rgba(22, 22, 22, 1);
 
     --transition-hover: all 0.5s;
 
@@ -19,6 +20,9 @@
     --size-24-16-12: clamp(16px, calc(24vw / var(--ratio)), 24px);
     --width-btn: clamp(164px, calc(250vw / var(--ratio)), 250px);
     --px-16-10-8: clamp(10px, calc(16vw / var(--ratio)), 16px);
+
+    /*для отступов*/
+    --pm-40-40-24: 40px;
 }
 
 @media screen and (max-width: 834px) {
@@ -31,6 +35,9 @@
         --size-24-16-12: clamp(12px, calc(16vw / var(--ratio)), 16px);
         --width-btn: clamp(117px, calc(164vw / var(--ratio)), 164px);
         --px-16-10-8: clamp(8px, calc(10vw / var(--ratio)), 10px);
+
+        /*для отступов*/
+        --pm-40-40-24: clamp(24px, calc(40vw / var(--ratio)), 40px);
     }
 }
 @media screen and (max-width: 450px) {
@@ -43,11 +50,15 @@
         --size-24-16-12: 12px;
         --width-btn: 117px;
         --px-16-10-8: 8px;
+
+        /*для отступов*/
+        --pm-40-40-24: 24px;
     }
 }
 
 /*для светлых кнопок*/
 .btn {
+    display: block;
     width: var(--width-btn);
     padding: var(--px-16-10-8) 0;
     text-align: center;
@@ -55,8 +66,13 @@
     letter-spacing: 0.48px;
     transition: var(--transition-hover);
 }
-.btn-blue {
+.btn-bold {
     font-family: "Cruinn Black";
+}
+.btn-thin {
+    font-family: "Cruinn Medium";
+}
+.btn-blue {
     background: var(--color-blue-100);
     color: var(--color-white-100);
     transition: var(--transition-hover);
@@ -65,6 +81,21 @@
         color: var(--color-blue-100);
     }
 }
-/*для тёмных кнопок*/
+.btn-blue-50 {
+    background: var(--color-blue-50);
+    color: var(--color-white-100);
+    transition: var(--transition-hover);
+    &:hover {
+        background: var(--color-white-100);
+        color: var(--color-blue-100);
+    }
+}
 .btn-dark {
+    background: none;
+    color: var(--color-white-75);
+    transition: var(--transition-hover);
+    &:hover {
+        background: var(--color-white-100);
+        color: var(--color-blue-100);
+    }
 }

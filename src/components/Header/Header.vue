@@ -20,7 +20,7 @@ import { LINKS_ROUTER } from "../../router";
             <SocialNetwork />
         </main>
         <hr className="header_line" />
-        <main className="header_bottom">
+        <nav className="header_bottom">
             <Logo />
             <router-link
                 class="bottom_router"
@@ -30,7 +30,7 @@ import { LINKS_ROUTER } from "../../router";
                 >{{ link.name }}</router-link
             >
             <BtnSignUp />
-        </main>
+        </nav>
     </header>
 </template>
 
