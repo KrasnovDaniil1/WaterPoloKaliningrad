@@ -1,6 +1,5 @@
 <script setup>
 import SocialNetwork from "../SocialNetwork.vue";
-import HeaderRouter from "./HeaderRouter.vue";
 import BtnSignUp from "../Buttons/BtnSignUp.vue";
 import EmailLink from "../Other/EmailLink.vue";
 import MobileLink from "../Other/MobileLink.vue";

@@ -56,26 +56,14 @@ defineProps({
         <line y1="21" x2="30" y2="21" stroke="#FFFCF2" stroke-width="2" />
     </svg>
 </template>
-
 <style lang="scss" scoped>
-@media screen and (max-width: 834px) {
-    .close {
-        width: 20px;
-        height: 20px;
-    }
-    .burger {
-        width: 30px;
-        height: 20px;
-    }
+svg {
+    width: 30px;
 }
+
 @media screen and (max-width: 450px) {
-    .close {
-        width: 12px;
-        height: 12px;
-    }
-    .burger {
-        width: 16px;
-        height: 10px;
+    svg {
+        width: 20px;
     }
 }
 </style>

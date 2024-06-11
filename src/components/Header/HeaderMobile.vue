@@ -1,32 +1,39 @@
 <script setup>
+import BtnSignUp from "../Buttons/BtnSignUp.vue";
+import BtnLearnMore from "../Buttons/BtnLearnMore.vue";
 import Logo from "../Other/Logo.vue";
 import EmailLink from "../Other/EmailLink.vue";
 import MobileLink from "../Other/MobileLink.vue";
-import HeaderBurger from "../Header/HeaderBurger.vue";
-
-import BtnSignUp from "../Buttons/BtnSignUp.vue";
-import BtnLearnMore from "../Buttons/BtnLearnMore.vue";
-
+import HeaderBurger from "../Other/HeaderBurger.vue";
 import { LINKS_ROUTER } from "../../router";
-
 import { ref } from "vue";
-const burger = ref(false);
+
+let burger = ref(false);
+
+function NoScrolling() {
+    burger.value = !burger.value;
+    let b = document.getElementById("app");
+    if (burger.value) {
+        b.style = "overflow:hidden; height:100vh";
+    } else {
+        setTimeout(() => {
+            b.style = "overflow:none;";
+        }, 100);
+    }
+}
 </script>
 
 <template>
-    <header class="header_mobile" :class="{ open: burger }">
+    <header class="header_mobile" :class="burger ? 'open' : 'close'">
         <main class="mobile_top">
             <Logo />
             <MobileLink class="top_mobile" />
-            <HeaderBurger
-                class="top_burger"
-                :open="burger"
-                @click="burger = !burger"
-            />
+            <HeaderBurger @click="NoScrolling" :open="burger" />
         </main>
-        <main class="header_popup">
+        <main class="mobile_popup">
             <EmailLink class="popup_email" />
             <router-link
+                @click="NoScrolling"
                 class="popup_router"
                 v-for="(link, index) in LINKS_ROUTER"
                 :key="index"
@@ -34,8 +41,8 @@ const burger = ref(false);
                 >{{ link.name }}</router-link
             >
             <nav class="popup_block">
-                <BtnSignUp />
-                <BtnLearnMore />
+                <BtnSignUp @click="NoScrolling" />
+                <BtnLearnMore @click="NoScrolling"/>
             </nav>
         </main>
     </header>
@@ -44,30 +51,26 @@ const burger = ref(false);
 <style lang="scss" scoped>
 .header_mobile {
     display: none;
-    transition: var(--transition-hover);
-    .header_popup {
-        width: 100%;
-        position: absolute;
-        left: 150%;
-        // transform: translateX(-50%);
-        // transition: var(--transition-hover);
-
-        // height: 0;
-        // overflow: hidden;
-    }
 }
 .open {
     background: var(--color-black);
-    height: 100vh;
-    .header_popup {
-        left: 0;
-        // left: 50%;
+    .mobile_popup {
+        top: 100%;
+    }
+}
+.close {
+    .mobile_popup {
+        top: -100vh;
     }
 }
 @media screen and (max-width: 834px) {
     .header_mobile {
+        transition: var(--transition-hover);
         display: block;
+        width: 100vw;
         color: var(--color-white-100);
+        position: relative;
+
         .mobile_top {
             display: flex;
             justify-content: space-between;
@@ -83,11 +86,16 @@ const burger = ref(false);
                 font-size: var(--size-24-24-12);
             }
         }
-        .header_popup {
+        .mobile_popup {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 12px;
+            padding-top: 12px;
+            background: var(--color-black);
+            transition: var(--transition-hover);
             .popup_email {
                 font-family: "Cruinn Bold";
                 font-size: var(--size-24-24-12);
@@ -116,8 +124,8 @@ const burger = ref(false);
         .mobile_top {
             padding: 8px 20px;
         }
-        .header_popup {
-            margin-top: 0px;
+        .mobile_popup {
+            padding-top: 0px;
             display: flex;
             flex-direction: column;
             align-items: center;
