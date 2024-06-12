@@ -5,6 +5,8 @@ import Logo from "../Other/Logo.vue";
 import EmailLink from "../Other/EmailLink.vue";
 import MobileLink from "../Other/MobileLink.vue";
 import HeaderBurger from "../Other/HeaderBurger.vue";
+import SocialNetwork from "../Other/SocialNetwork.vue";
+
 import { LINKS_ROUTER } from "../../router";
 import { ref } from "vue";
 
@@ -42,8 +44,9 @@ function NoScrolling() {
             >
             <nav class="popup_block">
                 <BtnSignUp @click="NoScrolling" />
-                <BtnLearnMore @click="NoScrolling"/>
+                <BtnLearnMore @click="NoScrolling" />
             </nav>
+            <SocialNetwork class="popup_social" />
         </main>
     </header>
 </template>
@@ -66,12 +69,14 @@ function NoScrolling() {
 @media screen and (max-width: 834px) {
     .header_mobile {
         transition: var(--transition-hover);
+        // transition-duration: 1s;
         display: block;
         width: 100vw;
         color: var(--color-white-100);
         position: relative;
 
         .mobile_top {
+            z-index: 1;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -115,6 +120,9 @@ function NoScrolling() {
                 a:last-child {
                     margin-left: var(--pm-40-40-24);
                 }
+            }
+            .popup_social {
+                margin-top: var(--pm-40-40-24);
             }
         }
     }

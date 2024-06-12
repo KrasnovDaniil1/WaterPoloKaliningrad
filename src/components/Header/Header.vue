@@ -1,5 +1,5 @@
 <script setup>
-import SocialNetwork from "../SocialNetwork.vue";
+import SocialNetwork from "../Other/SocialNetwork.vue";
 import BtnSignUp from "../Buttons/BtnSignUp.vue";
 import EmailLink from "../Other/EmailLink.vue";
 import MobileLink from "../Other/MobileLink.vue";
@@ -7,6 +7,7 @@ import MobileLink from "../Other/MobileLink.vue";
 import Logo from "../Other/Logo.vue";
 
 import { LINKS_ROUTER } from "../../router";
+
 </script>
 
 <template>
@@ -47,7 +48,7 @@ import { LINKS_ROUTER } from "../../router";
         justify-content: space-between;
         max-width: 1600px;
         margin: 0 auto;
-        padding: 0 10px;
+        padding: 0 var(--pm-10-5-2);
         font-family: "Cruinn Black";
     }
 

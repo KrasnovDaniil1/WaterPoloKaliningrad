@@ -6,7 +6,6 @@
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
                 class="link_img"
             >
                 <path
@@ -20,7 +19,6 @@
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
                 class="link_img"
             >
                 <path
@@ -34,7 +32,6 @@
                 height="18"
                 viewBox="0 0 24 18"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
                 class="link_img"
             >
                 <path
@@ -61,6 +58,32 @@
             transition: var(--transition-hover);
             &:hover {
                 fill: var(--color-white-100);
+            }
+        }
+    }
+}
+@media screen and (max-width: 834px) {
+    .social_network {
+        .network_link {
+            &:not(:first-child) {
+                margin-left: 30px;
+            }
+
+            .link_img {
+                width: 36px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    .social_network {
+        .network_link {
+            &:not(:first-child) {
+                margin-left: 24px;
+            }
+
+            .link_img {
+                width: 18px;
             }
         }
     }

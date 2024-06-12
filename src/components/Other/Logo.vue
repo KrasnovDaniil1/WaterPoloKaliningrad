@@ -33,7 +33,6 @@
                 stroke-linejoin="round"
             />
         </svg>
-
         <span class="logo_label">
             Водное поло <br />
             Калининград
@@ -46,7 +45,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--color-yellow);
+    color: var(--color-yellow) !important;
     .logo_img {
         width: clamp(40px, calc(54vw / var(--ratio)), 54px);
         height: clamp(40px, calc(54vw / var(--ratio)), 54px);
