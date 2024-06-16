@@ -54,7 +54,7 @@
 
         .link_img {
             width: 24px;
-            fill: var(--color-white-80);
+            fill: var(--color-white-80) !important;
             transition: var(--transition-hover);
             &:hover {
                 fill: var(--color-white-100);
@@ -71,19 +71,6 @@
 
             .link_img {
                 width: 36px;
-            }
-        }
-    }
-}
-@media screen and (max-width: 450px) {
-    .social_network {
-        .network_link {
-            &:not(:first-child) {
-                margin-left: 24px;
-            }
-
-            .link_img {
-                width: 18px;
             }
         }
     }

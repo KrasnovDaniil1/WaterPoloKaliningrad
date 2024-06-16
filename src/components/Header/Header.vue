@@ -7,7 +7,6 @@ import MobileLink from "../Other/MobileLink.vue";
 import Logo from "../Other/Logo.vue";
 
 import { LINKS_ROUTER } from "../../router";
-
 </script>
 
 <template>

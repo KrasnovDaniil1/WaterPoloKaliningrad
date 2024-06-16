@@ -23,12 +23,16 @@ import BtnToMain from "./Buttons/BtnToMain.vue";
             <SocialNetwork />
         </nav>
         <nav class="footer_info">
-            <h4 class="block_title">Контакты</h4>
-            <MobileLink class="block_text" />
-            <EmailLink class="block_text" />
-            <h4 class="block_title">Адрес</h4>
-            <AddressLink class="block_text" />
-            <TimeLink class="block_text" />
+            <div class="info_block">
+                <h4 class="block_title">Контакты</h4>
+                <MobileLink class="block_text" />
+                <EmailLink class="block_text" />
+            </div>
+            <div class="info_block">
+                <h4 class="block_title">Адрес</h4>
+                <AddressLink class="block_text" />
+                <TimeLink class="block_text" />
+            </div>
         </nav>
         <nav class="footer_router">
             <h4 class="router_title">Меню</h4>
@@ -72,6 +76,7 @@ import BtnToMain from "./Buttons/BtnToMain.vue";
     .footer_sign {
         display: flex;
         flex-direction: column;
+
         .block_title,
         .router_title,
         .sign_title {
@@ -82,22 +87,23 @@ import BtnToMain from "./Buttons/BtnToMain.vue";
         }
         .block_text,
         .router_link {
+            margin-left: 4px;
             font-family: "Cruinn Bold";
             font-size: var(--size-24-16-10);
             color: var(--color-white-40);
         }
     }
     .footer_info {
-        .block_title {
-            margin-top: auto;
-            &:first-child {
-                margin-top: 0;
+        .info_block {
+            display: flex;
+            flex-direction: column;
+            &:last-child {
+                margin-top: auto;
             }
-        }
-        .block_text {
-            &:nth-child(3),
-            &:nth-child(6) {
-                margin-top: var(--pm-16-8-4);
+            .block_text {
+                &:last-child {
+                    margin-top: var(--pm-16-8-4);
+                }
             }
         }
     }
@@ -107,6 +113,9 @@ import BtnToMain from "./Buttons/BtnToMain.vue";
             &:not(:last-child) {
                 margin-bottom: var(--pm-16-8-4);
             }
+        }
+        .router-link-active {
+            color: var(--color-white-100) !important;
         }
     }
     .footer_sign {
@@ -125,6 +134,50 @@ import BtnToMain from "./Buttons/BtnToMain.vue";
             margin-top: var(--pm-40-16-8);
             .block_btn:last-child {
                 margin-top: var(--pm-16-8-4);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .footer {
+        padding: 16px clamp(40px, calc(80vw / var(--ratio)), 80px);
+        .logo {
+            height: fit-content;
+        }
+        .footer_social,
+        .footer_router {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    .footer {
+        flex-direction: column;
+        padding: 8px 20px;
+        align-items: center;
+
+        .footer_info {
+            margin-top: 16px;
+            flex-direction: row;
+            .info_block:first-child {
+                margin-right: clamp(10px, calc(20vw / var(--ratio)), 20px);
+            }
+        }
+        .footer_sign {
+            margin-top: 16px;
+            .sign_title,
+            .sign_info {
+                max-width: 100vw;
+                text-align: center;
+            }
+            .sign_block {
+                display: flex;
+                justify-content: center;
+                .block_btn:last-child {
+                    margin-top: 0;
+                    margin-left: 8px;
+                }
             }
         }
     }

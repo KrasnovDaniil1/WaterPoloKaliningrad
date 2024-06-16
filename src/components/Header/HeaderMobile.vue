@@ -28,7 +28,7 @@ function NoScrolling() {
 <template>
     <header class="header_mobile" :class="burger ? 'open' : 'close'">
         <main class="mobile_top">
-            <Logo />
+            <Logo @click="NoScrolling" />
             <MobileLink class="top_mobile" />
             <HeaderBurger @click="NoScrolling" :open="burger" />
         </main>
@@ -46,7 +46,7 @@ function NoScrolling() {
                 <BtnSignUp @click="NoScrolling" />
                 <BtnLearnMore @click="NoScrolling" />
             </nav>
-            <SocialNetwork class="popup_social" />
+            <SocialNetwork />
         </main>
     </header>
 </template>
@@ -66,6 +66,7 @@ function NoScrolling() {
         top: -100vh;
     }
 }
+
 @media screen and (max-width: 834px) {
     .header_mobile {
         transition: var(--transition-hover);
@@ -114,15 +115,13 @@ function NoScrolling() {
             .router-link-active {
                 color: var(--color-white-100) !important;
             }
+
             .popup_block {
-                margin-top: var(--pm-40-40-24);
+                margin: var(--pm-40-40-24) 0;
                 display: flex;
                 a:last-child {
                     margin-left: var(--pm-40-40-24);
                 }
-            }
-            .popup_social {
-                margin-top: var(--pm-40-40-24);
             }
         }
     }
