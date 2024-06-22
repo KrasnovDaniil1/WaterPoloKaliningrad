@@ -1,6 +1,7 @@
 <script setup>
 import Header from "./components/Header/Header.vue";
 import HeaderMobile from "./components/Header/HeaderMobile.vue";
+import FirstWindows from "./components/Other/FirstWindows.vue";
 
 import Footer from "./components/Footer.vue";
 </script>
@@ -8,6 +9,7 @@ import Footer from "./components/Footer.vue";
 <template>
     <Header />
     <HeaderMobile />
+    <FirstWindows />
     <Footer />
 </template>
 

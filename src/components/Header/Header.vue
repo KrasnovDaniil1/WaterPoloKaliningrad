@@ -78,6 +78,10 @@ import { LINKS_ROUTER } from "../../router";
         .bottom_router {
             color: var(--color-white-40);
             font-size: clamp(18px, calc(24vw / var(--ratio)), 24px);
+            transition: var(--transition-hover);
+            &:hover {
+                color: var(--color-white-100);
+            }
         }
         .router-link-active {
             color: var(--color-white-100);
