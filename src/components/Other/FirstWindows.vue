@@ -62,7 +62,6 @@ watch(
 </script>
 <template>
     <section class="window">
-        <!-- <LoadImg class="window_img" :link="page.img" /> -->
         <img class="window_img" :src="page.img" />
         <div class="window_block">
             <h1 class="block_title">{{ page.title }}</h1>
@@ -80,6 +79,7 @@ watch(
 .window {
     position: relative;
     background: none;
+    background: var(--color-black);
     .window_img {
         position: absolute;
         top: 0;

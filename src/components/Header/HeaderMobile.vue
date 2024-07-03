@@ -75,6 +75,7 @@ function NoScrolling() {
         width: 100vw;
         color: var(--color-white-100);
         position: relative;
+        z-index: 10;
 
         .mobile_top {
             z-index: 1;

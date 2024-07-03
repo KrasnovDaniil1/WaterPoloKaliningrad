@@ -10,6 +10,7 @@ import Footer from "./components/Footer.vue";
     <Header />
     <HeaderMobile />
     <FirstWindows />
+    <RouterView />
     <Footer />
 </template>
 
